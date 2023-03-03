@@ -1,0 +1,99 @@
+import pyautogui
+import time
+import pyperclip
+
+# 将文本复制到剪贴板
+text = "以《你好》为题，写200字以下文章。"
+pyperclip.copy(text)
+# 最小化python
+pyautogui.moveTo(2900, 20)
+pyautogui.click()
+# 打开浏览器
+x, y = 72, 449
+pyautogui.moveTo(x, y)
+pyautogui.doubleClick()
+time.sleep(4)
+#点击集锦
+pyautogui.moveTo(2741, 106)
+pyautogui.click()
+time.sleep(3)
+#开gpt
+pyautogui.moveTo(2550, 475)
+pyautogui.click()
+time.sleep(3)
+pyautogui.moveTo(2557, 512)
+pyautogui.click()
+#关闭集锦
+time.sleep(3)
+pyautogui.moveTo(2963, 269)
+pyautogui.click()
+time.sleep(5)
+#黏贴
+# 模拟按下“ctrl”和“v”键
+pyautogui.moveTo(1320, 1839)
+time.sleep(3)
+pyautogui.hotkey('ctrl', 'v')
+time.sleep(3)
+#发送
+pyautogui.moveTo(2538, 1822)
+pyautogui.click()
+time.sleep(60)
+#收集
+pyautogui.moveTo(x=1140, y=446)
+pyautogui.mouseDown(button='left')
+pyautogui.moveTo(x=2025, y=1485)
+pyautogui.mouseUp(button='left')
+time.sleep(2)
+# 模拟按下Ctrl键和C键
+pyautogui.keyDown('ctrl')
+pyautogui.press('c')
+pyautogui.keyUp('ctrl')
+
+#关闭浏览器
+time.sleep(3)
+pyautogui.moveTo(3064, 28)
+pyautogui.click()
+#打开剪映
+
+#关闭VPN
+pyautogui.moveTo(855, 858)
+pyautogui.doubleClick()
+time.sleep(1)
+pyautogui.moveTo(1705, 589)
+pyautogui.rightClick()
+time.sleep(1)
+pyautogui.moveTo(1811, 702)
+pyautogui.click()
+pyautogui.moveTo(2590, 450)
+pyautogui.click()
+#打开剪映
+pyautogui.moveTo(228,1036)
+pyautogui.doubleClick()
+time.sleep(5)
+#图文成片
+pyautogui.moveTo(1234, 712)
+pyautogui.click()
+time.sleep(3)
+pyautogui.hotkey('ctrl', 'v')
+time.sleep(1)
+pyautogui.moveTo(1988, 1576)
+pyautogui.click()
+#导出
+time.sleep(60)
+pyautogui.moveTo(2442, 84)
+pyautogui.click()
+
+time.sleep(5)
+#导出+关闭剪映
+pyautogui.moveTo(x=1938, y=1651)
+pyautogui.click()
+time.sleep(60)
+pyautogui.moveTo(x=2121, y=1367)
+pyautogui.click()
+time.sleep(1)
+pyautogui.moveTo(x=2705, y=86)
+pyautogui.click()
+time.sleep(1)
+pyautogui.moveTo(x=2502, y=380)
+pyautogui.click()
+time.sleep(1)
